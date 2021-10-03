@@ -2,10 +2,10 @@ import 'package:mobx/mobx.dart';
 import 'package:mobx_bloc_getx_cleandart/app/modulo/provider/domain/use_case.dart';
 
 class ControllerCounter {
-  NumberCounter nc = NumberCounter();
+  final nc = NumberCounter();
 
-  late final counter = Observable<int>(nc.number).toString();
-  
+  late final counter = Observable(nc.number);
+  late final incnumber = Action(incrementnum);
 
-  incnumber() => nc.incrementnumber();
-}
+  int incrementnum()=> counter.value = nc.incrementnumber();
+  }

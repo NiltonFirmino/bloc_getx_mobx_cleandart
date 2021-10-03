@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:mobx_bloc_getx_cleandart/app/modulo/provider/infra/controller.dart';
 
-class MyHomeProvider extends StatefulWidget {
-  const MyHomeProvider({Key? key, required this.title}) : super(key: key);
+class MyHomeMobX extends StatefulWidget {
+  const MyHomeMobX({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
-  State<MyHomeProvider> createState() => _MyHomeProviderState();
+  State<MyHomeMobX> createState() => _MyHomeMobXState();
 }
 
-class _MyHomeProviderState extends State<MyHomeProvider> {
+class _MyHomeMobXState extends State<MyHomeMobX> {
   final cc = ControllerCounter();
   @override
   Widget build(BuildContext context) {
@@ -23,13 +23,13 @@ class _MyHomeProviderState extends State<MyHomeProvider> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'You have pushed the button this many times:',
+              'Contador de Pares usando MobX:',
             ),
             Observer(
               builder: (BuildContext context) {
                 return Text(
                   // ignore: unnecessary_brace_in_string_interps
-                  cc.counter,
+                  cc.counter.value.toString(),
                   style: Theme.of(context).textTheme.headline4,
                 );
               },

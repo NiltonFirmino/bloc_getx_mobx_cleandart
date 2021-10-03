@@ -1,9 +1,10 @@
 class NumberCounter {
- int _number = 0;
+  int _number = 0;
 
- int get number => _number;
+  int get number => _number;
 
-  incrementnumber() {
-    _number++;
+  int incrementnumber() {
+    _number += 2;
+    return _number;
   }
 }
