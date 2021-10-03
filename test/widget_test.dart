@@ -7,7 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mobx_bloc_getx_cleandart/app/myapp_provider.dart';
+import 'package:mobx_bloc_getx_cleandart/app/myapp.dart';
 
 
 
