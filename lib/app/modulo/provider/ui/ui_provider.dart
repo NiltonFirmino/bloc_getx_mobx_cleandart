@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class MyHomeProvider extends StatefulWidget {
   const MyHomeProvider({Key? key, required this.title}) : super(key: key);
@@ -9,14 +10,6 @@ class MyHomeProvider extends StatefulWidget {
 }
 
 class _MyHomeProviderState extends State<MyHomeProvider> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,17 +24,18 @@ class _MyHomeProviderState extends State<MyHomeProvider> {
               'You have pushed the button this many times:',
             ),
             Text(
-              '$_counter',
+              // ignore: unnecessary_brace_in_string_interps
+              "",
               style: Theme.of(context).textTheme.headline4,
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () {},
         tooltip: 'Increment',
         child: const Icon(Icons.add),
-      ), 
+      ),
     );
   }
 }

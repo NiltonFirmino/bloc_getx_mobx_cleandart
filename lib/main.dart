@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'app/myapp.dart';
+import 'app/myapp_provider.dart';
 
 
 void main() {
