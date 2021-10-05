@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:mobx_bloc_getx_cleandart/app/modulo/provider/infra/controller.dart';
+import 'package:mobx_bloc_getx_cleandart/app/modulo/provider/infra/controller_mobx.dart';
 
 class MyHomeMobX extends StatefulWidget {
-  const MyHomeMobX({Key? key, required this.title}) : super(key: key);
-  final String title;
-
+  const MyHomeMobX({Key? key}) : super(key: key);
+  
   @override
   State<MyHomeMobX> createState() => _MyHomeMobXState();
 }
 
 class _MyHomeMobXState extends State<MyHomeMobX> {
-  final cc = ControllerCounter();
+  final ccmobx = ControllerCounterMobx();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: const Text('Contador usando Mobx'),
       ),
       body: Center(
         child: Column(
@@ -28,8 +27,7 @@ class _MyHomeMobXState extends State<MyHomeMobX> {
             Observer(
               builder: (BuildContext context) {
                 return Text(
-                  // ignore: unnecessary_brace_in_string_interps
-                  cc.counter.value.toString(),
+                  ccmobx.counter.value.toString(),
                   style: Theme.of(context).textTheme.headline4,
                 );
               },
@@ -39,9 +37,8 @@ class _MyHomeMobXState extends State<MyHomeMobX> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          cc.incnumber();
+          ccmobx.incnumber();
         },
-        tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
     );

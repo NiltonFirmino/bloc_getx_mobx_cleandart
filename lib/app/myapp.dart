@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'modulo/provider/ui/ui_mobx.dart';
+import 'package:mobx_bloc_getx_cleandart/app/modulo/provider/ui/ui_bloc.dart';
+//import 'modulo/provider/ui/ui_mobx.dart';
 
 class MyApp extends StatelessWidget {
   
@@ -9,11 +9,12 @@ class MyApp extends StatelessWidget {
   
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Gerindo Estados - Flutter',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomeMobX(title: 'Flutter MobX'),
+      home: const MyHomeBloc(),
     );
   }
 }
