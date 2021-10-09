@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mobx_bloc_getx_cleandart/app/modulo/provider/ui/ui_bloc.dart';
-//import 'modulo/provider/ui/ui_mobx.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mobx_bloc_getx_cleandart/app/modulo/ui/ui_bloc.dart';
+
+import 'modulo/infra/controller_bloc.dart';
 
 class MyApp extends StatelessWidget {
   
@@ -8,13 +10,15 @@ class MyApp extends StatelessWidget {
   @override
   
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return BlocProvider(
+      create: (_) => CounterCubit(),
+      child: MaterialApp(
       title: 'Gerindo Estados - Flutter',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: const MyHomeBloc(),
-    );
+    ),);
   }
 }

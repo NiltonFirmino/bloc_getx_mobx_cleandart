@@ -1,5 +1,5 @@
 class NumberCounter {
-   int _number = 0;
+  int _number = 0;
 
   int get number => _number;
 

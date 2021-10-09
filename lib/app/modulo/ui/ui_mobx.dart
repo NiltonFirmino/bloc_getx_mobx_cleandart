@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:mobx_bloc_getx_cleandart/app/modulo/provider/infra/controller_mobx.dart';
+import 'package:mobx_bloc_getx_cleandart/app/modulo/infra/controller_mobx.dart';
 
 class MyHomeMobX extends StatefulWidget {
   const MyHomeMobX({Key? key}) : super(key: key);
