@@ -5,6 +5,5 @@ class CounterCubit extends Cubit<int> {
   
   CounterCubit() : super(nc.number);
   
-
   void increment() => emit (nc.incrementnumber());
 }
