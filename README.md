@@ -1,2 +1,2 @@
-# provider_mobx_bloc_getx_cleandart
+# MobX BloC GetX CleanDart
  Estudo Voltado a Reatividades em Geral
