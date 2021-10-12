@@ -1,8 +1,7 @@
 # MobX BloC GetX CleanDart
-## Estudo Voltado a Reatividades em Geral, Utilizando as seguintes ferramenteas `MobX`, `BloC` e `GetX`.
+### Estudo Voltado a Reatividades em Geral, Utilizando as seguintes ferramenteas `MobX`, `BloC` e `GetX`.
 
-
-###O projeto ainda encontra-se em fase de construção.
+#### O projeto ainda encontra-se em fase de construção.
 
 
  ## Desenvolvimento:
