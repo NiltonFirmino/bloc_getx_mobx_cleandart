@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mobx_bloc_getx_cleandart/app/modulo/ui/ui_bloc.dart';
+//import 'package:mobx_bloc_getx_cleandart/app/modulo/ui/ui_bloc.dart';
 
 import 'modulo/infra/controller_bloc.dart';
+import 'modulo/ui/ui_getx.dart';
 
 class MyApp extends StatelessWidget {
   
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomeBloc(),
+      home: const MyHomeGetX(),
     ),);
   }
 }
